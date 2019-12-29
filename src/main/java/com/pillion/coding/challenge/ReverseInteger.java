@@ -7,11 +7,12 @@ public class ReverseInteger {
 	}
 
 	public static long reverseInteger(int input) {
-		long reversed = 0;
+		int reversed = 0;
 		
 		while(input != 0) {
+			System.out.println(reversed * 10 + "  " + input % 10);
 			reversed = reversed * 10 + input % 10;
-			
+
 			if(reversed > Integer.MAX_VALUE || reversed < Integer.MIN_VALUE) return 0;
 			
 			input /= 10;
